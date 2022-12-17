@@ -2,6 +2,7 @@
   "name": "2022-devfest-react-codejam",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kimdoyeonn.github.io/2022-devfest-react-codejam",
   "dependencies": {
     "@stackflow/core": "^0.16.0",
     "@stackflow/plugin-basic-ui": "^0.16.0",

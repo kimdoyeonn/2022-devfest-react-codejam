@@ -1,6 +1,7 @@
 import React from 'react';
 import { EllipsisBox } from 'src/components/common/elements';
 import { UserOtherProductInterface } from 'src/schemas/Product';
+import { useFlow } from 'src/utils/stackflow';
 import { OtherItemsWrapper, OtherItemsContentWrapper, OtherItem, OtherItemImageWrapper } from './styled';
 
 interface Props {
@@ -9,6 +10,12 @@ interface Props {
 }
 
 const OtherItems: React.FC<Props> = ({ userName, other }) => {
+  const { push } = useFlow()
+
+  const goToDetailPage = (id: number) => {
+    push("DetailPage", { id: id.toString() })
+  }
+
   return (
     <OtherItemsWrapper>
       <p className="title">{userName}님의 판매 상품</p>
